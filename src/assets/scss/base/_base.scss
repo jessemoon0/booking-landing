@@ -1,0 +1,67 @@
+@import '../abstracts/mixins';
+
+:root {
+  // BRANDING COLORS
+  --color-primary: #eb2f64;
+  --color-primary-light: #FF3366;
+  --color-primary-dark: #BA265D;
+
+  // NORMAL COLORS
+  --color-white: #fff;
+  --color-black: #000;
+  // Grey scale
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  // Font sizes
+  --default-font-size: 1.6rem;
+}
+
+// Reset browser CSS
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  // Good practice to put box-sizing: border-box in body and inherit here.
+  box-sizing: inherit;
+}
+
+// Root font size for REM units (responsive design).
+// Browser default font size is 16px so we use 62.5% = 10px. So 1 rem = 10px for easier calculations.
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) { // width < 1200px
+    font-size: 56.25%; // 1 rem = 9px, 9px/16px = 56.25%
+  }
+  @include respond(tab-port) { // width < 900px
+    font-size: 50%; // 1 rem = 8px, 8px/16px = 50%
+  }
+  //@include respond(phone) { // width < 600px
+  // Not needed as tab-port has same %.
+  //  font-size: 50%; // 1 rem = 8px, 8px/16px = 50%.
+  //}
+  @include respond(big-desktop) { // width > 1800px
+    font-size: 75%; // 1 rem = 12px, 12px/16px = 75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+
+  @include respond(tab-port) { // width < 900px
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: var(--color-primary-light);
+  color: var(--color-white);
+}

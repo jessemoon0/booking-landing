@@ -1,0 +1,14 @@
+:host {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.hotel-view {
+  flex: 1;
+  // For test purposes
+  background-color: orangered;
+  // For testing sideNav height & element allocation
+  height: 80rem;
+  //background-color: var(--color-white);
+}

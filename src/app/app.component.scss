@@ -1,3 +1,5 @@
+@import '../assets/scss/abstracts/mixins';
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -5,5 +7,11 @@
   box-shadow: var(--shadow-dark);
 
   // For testing purposes
-  min-height: 50rem;
+  //min-height: 50rem;
+
+  @include respond(tab-land) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }

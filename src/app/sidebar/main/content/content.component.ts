@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {REVIEWS} from './review/reviews';
 
 @Component({
   selector: 'app-content',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
+
+  reviewsArr: Array<string> = REVIEWS;
 
   constructor() { }
 

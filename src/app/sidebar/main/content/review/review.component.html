@@ -1,0 +1,14 @@
+<!-- <Figure> are perfect for reviews -->
+<figure class="review">
+  <blockquote class="review__text">
+    {{text}}
+  </blockquote>
+  <figcaption class="review__user">
+    <img [src]="userImage" [alt]="username" class="review__photo">
+    <div class="review__user-box">
+      <p class="review__username">{{username}}</p>
+      <p class="review__user-date">{{userDate}}</p>
+    </div>
+    <div class="review__rating">{{rating}}</div>
+  </figcaption>
+</figure>

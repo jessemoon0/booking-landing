@@ -1,12 +1,19 @@
+@import '../../assets/scss/abstracts/mixins';
+
 .header {
   height: 7rem;
   background-color: var(--color-white);
-  border-bottom: var(--color-grey-light-2);
+  border-bottom: var(--border-bottom);
   font-size: 1.4rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include respond(break-500) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
 }
 
 //////////// LOGO ////////////
@@ -24,6 +31,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include respond(break-500) {
+    order: 1;
+    flex: 0 0 90%;
+    margin: 0 auto;
+  }
 
   &__input {
     font-family: inherit;

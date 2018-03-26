@@ -1,3 +1,32 @@
-<p>
-  content works!
-</p>
+<div class="detail">
+  <div class="description">
+    <app-description></app-description>
+  </div>
+  <div class="user-reviews">
+
+    <app-review [text]="reviewsArr[0]"
+                [userImage]="'../../../../../assets/img/user-1.jpg'"
+                [username]="'Nick Smith'"
+                [userDate]="'Dic 23rd 2017'"
+                [rating]="7.8">
+    </app-review>
+
+    <app-review [text]="reviewsArr[1]"
+                [userImage]="'../../../../../assets/img/user-2.jpg'"
+                [username]="'Mary Thomas'"
+                [userDate]="'Feb 13rd 2018'"
+                [rating]="9.3">
+    </app-review>
+
+    <app-button-inline [text]="'Show all'" [hasArrow]="true"></app-button-inline>
+
+  </div>
+</div>
+
+<div class="cta">
+  <h2 class="cta__book-now">
+    Good News! We have 4 rooms for your selected dates!
+  </h2>
+  <app-button-change-text-on-hover></app-button-change-text-on-hover>
+
+</div>

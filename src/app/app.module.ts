@@ -13,6 +13,7 @@ import { ButtonInlineComponent } from './shared/button-inline/button-inline.comp
 import { DescriptionComponent } from './sidebar/main/content/description/description.component';
 import { ReviewComponent } from './sidebar/main/content/review/review.component';
 import { ButtonChangeTextOnHoverComponent } from './shared/button-change-text-on-hover/button-change-text-on-hover.component';
+import { MenuComponent } from './shared/components/menu/menu.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ButtonChangeTextOnHoverComponent } from './shared/button-change-text-on
     ButtonInlineComponent,
     DescriptionComponent,
     ReviewComponent,
-    ButtonChangeTextOnHoverComponent
+    ButtonChangeTextOnHoverComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
